@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>Galeria</title>
@@ -67,40 +66,58 @@
       color: #ffffff;
     }
     footer {
-      background-color: #003366; /* Fondo más oscuro para el footer */
-      padding: 30px 20px;
-      color: #ffffff;
+      background-color: #222;
+      color: #fff;
+      padding: 2rem 1rem;
     }
-    .footer-column h3 {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
+
+    .footer-container {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+      align-items: flex-start;
     }
-    .footer-column p, .footer-column a {
-      color: #ffffff;
-      text-decoration: none;
-      margin-bottom: 10px;
-      display: block;
+
+    .footer-contact-form {
+      flex: 1 1 300px;
     }
-    .footer-column input {
+
+    .footer-contact-form h3 {
+      margin-bottom: 1rem;
+    }
+
+    .footer-contact-form input,
+    .footer-contact-form textarea {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ffffff;
-      border-radius: 5px;
-      background-color: #004080; /* Fondo del input */
-      color: #ffffff;
-    }
-    .footer-column button {
-      background-color: #0055A4; /* Color del botón */
-      color: #ffffff;
+      padding: 0.5rem;
+      margin-bottom: 0.7rem;
       border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
+      border-radius: 4px;
+      font-size: 1rem;
     }
-    .footer-column button:hover {
-      background-color: #0072CE;
+
+    .footer-contact-form button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .footer-contact-form .error {
+      color: #ffaaaa;
+      font-size: 0.85rem;
+      display: none;
+    }
+
+    .footer-contact-form .success {
+      color: #90ee90;
+      margin-top: 0.5rem;
     }
   </style>
 </head>
@@ -150,20 +167,25 @@
     </div>
   </div>
   <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-6 footer-column">
-          <h3>CONTACTE:</h3>
-          <p><strong>Email:</strong> <a href="mailto:afilame@contacto.com">aflame@contacto.com</a></p>
-          <p><strong>Instagram:</strong> <a href="https://instagram.com/afilame">@aflame</a></p>
-          <p><strong>Teléfono:</strong> +34 123 45 67 89</p>
-        </div>
-        <div class="col-12 col-md-6 footer-column">
-          <h3>NEWSLETTER</h3>
-          <p>¡Suscríbete a la Newsletter para recibir noticias de las próximas actualizaciones primero!</p>
-          <input type="email" placeholder="Introduce tu correo electrónico" required>
-          <button>Suscribirse</button>
-        </div>
+    <div class="footer-container">
+      <div class="footer-contact-form">
+        <h3>Pàgina de contacte</h3>
+        <form id="footerForm">
+          <input type="text" id="nom" nom="nom" placeholder="El teu nom" required>
+          <div class="error" id="nomError">El nom es obligatori</div>
+
+          <input type="email" id="email" nom="email" placeholder="Email" required>
+          <div class="error" id="emailError">El email no es valid</div>
+
+          <input type="text" id="asunto" nom="asunto" placeholder="Asumpte" required>
+          <div class="error" id="asuntoError">El asumpte es obligatori</div>
+
+          <textarea id="missatge" nom="missatge" rows="3" placeholder="Missatge o error sobre el joc" required></textarea>
+          <div class="error" id="missatgeError">El missatge es obligatori</div>
+
+          <button type="submit">Enviar</button>
+          <div class="success" id="responseMsg"></div>
+        </form>
       </div>
     </div>
   </footer>
@@ -173,8 +195,82 @@
     const carouselInstance = new bootstrap.Carousel(carrusel, {
     });
 
-    document.getElementById('carruselBootstrap').addEventListener('slide.bs.carousel', function () {
-      console.log('El carrusel está cambiando de imagen.');
+    document.getElementById('carruselBootstrap').addEventListener('slide.bs.carousel', function () {});
+
+    //Footer de contact
+    const form = document.getElementById('footerForm');
+    const nom = document.getElementById('nom');
+    const email = document.getElementById('email');
+    const asunto= document.getElementById('asunto');
+    const missatge = document.getElementById('missatge');
+
+    const nomError = document.getElementById('nomError');
+    const emailError = document.getElementById('emailError');
+    const asuntoError= document.getElementById('asuntoError');
+    const missatgeError = document.getElementById('missatgeError');
+    const responseMsg = document.getElementById('responseMsg');
+
+    function validacioDeFormulari() {
+      let isValid = true;
+      nomError.style.display = 'none';
+      emailError.style.display = 'none';
+      asuntoError.style.display = 'none';
+      missatgeError.style.display = 'none';
+      responseMsg.textContent = '';
+
+      if (nom.value === '') {
+        nomError.style.display = 'block';
+        isValid = false;
+      }
+
+      const emailCaracteres = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailCaracteres.test(email.value)) {
+        emailError.style.display = 'block';
+        isValid = false;
+      }
+
+      if (asunto.value === '') {
+      asuntoError.style.display = 'block';
+      isValid = false;
+    }
+
+      if (missatge.value === '') {
+        missatgeError.style.display = 'block';
+        isValid = false;
+      }
+
+      return isValid;
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!validacioDeFormulari()) return;
+      const data = {
+        nom: nom.value,
+        email: email.value,
+        asunto: asunto.value,
+        missatge: missatge.value
+      };
+
+      try {
+        let token = "pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS";
+        const res = await fetch('https://phpstack-1076337-5399863.cloudwaysapps.com/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+
+        if (!res.ok) throw new Error('Error al enviar');
+
+        const result = await res.json();
+        responseMsg.textContent = '¡Mensaje enviado con éxito!';
+        form.reset();
+      } catch (error) {
+        responseMsg.textContent = 'Error al enviar el mensaje.';
+        responseMsg.style.color = 'tomato';
+      }
     });
   </script>
 </body>
