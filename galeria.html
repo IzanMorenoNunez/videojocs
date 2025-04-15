@@ -1,154 +1,114 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <title>Galeria</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Galeria</title>
 </head>
 <header style="top: 0px;">
-    <nav class="navbar bg-body-tertiary fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">AFLAME</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AFLAME</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="qui_som.html">Qui som?</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="galeria.html">Galeria</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="comentaris.html">Comentaris</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="clasificacions.html">Clasificacions</a>
-              </li>
-              <hr>
-              <li class="nav-item">
-                <a class="nav-link" href="requeriments.html">Requirements</a>
-              </li>
-            </ul>
-          </div>
+  <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">AFLAME</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AFLAME</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="qui_som.html">Qui som?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="galeria.html">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="comentaris.html">Comentaris</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="clasificacions.html">Clasificacions</a>
+            </li>
+            <hr>
+            <li class="nav-item">
+              <a class="nav-link" href="requeriments.html">Requirements</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 </header>
 <style>
-    body {
-      background-color: #00203F;
-      color: #ffffff;
-    }
-    .carousel-item img {
-      object-fit: cover;
-      height: 450px;
-    }
-    .carousel-caption {
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-      padding: 15px;
-    }
-    .custom-control {
-      font-size: 1.2rem;
-      color: #ffffff;
-    }
-    footer {
-      background-color: #222;
-      color: #fff;
-      padding: 2rem 1rem;
-    }
+  body {
+    background-color: #00203F;
+    color: #ffffff;
+  }
 
-    .footer-container {
-      max-width: 1000px;
-      margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
+  .carousel-item img {
+    object-fit: cover;
+    height: 450px;
+  }
 
-    .footer-contact-form {
-      flex: 1 1 300px;
-    }
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 15px;
+  }
 
-    .footer-contact-form h3 {
-      margin-bottom: 1rem;
-    }
-
-    .footer-contact-form input,
-    .footer-contact-form textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 0.7rem;
-      border: none;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-
-    .footer-contact-form button {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 0.6rem 1rem;
-      font-size: 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .footer-contact-form .error {
-      color: #ffaaaa;
-      font-size: 0.85rem;
-      display: none;
-    }
-
-    .footer-contact-form .success {
-      color: #90ee90;
-      margin-top: 0.5rem;
-    }
-  </style>
+  .custom-control {
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+</style>
 </head>
+
 <body>
   <div class="container py-5">
     <h1 class="text-center mb-4" style="margin-top: 100px;">Galeria</h1>
 
     <div id="carruselBootstrap" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carruselBootstrap" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carruselBootstrap" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carruselBootstrap" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carruselBootstrap" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
 
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="un juego de un fuego pequeño que tiene que superar dungeons.png" class="d-block w-100" alt="Primera Imagen">
+          <img src="un juego de un fuego pequeño que tiene que superar dungeons.png" class="d-block w-100"
+            alt="Primera Imagen">
           <div class="carousel-caption">
             <h3>Primera Imagen</h3>
             <p>Descripción breve de la primera imagen.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="un juego de un fuego pequeño que tiene que superar dungeons.png" class="d-block w-100" alt="Segunda Imagen">
+          <img src="un juego de un fuego pequeño que tiene que superar dungeons.png" class="d-block w-100"
+            alt="Segunda Imagen">
           <div class="carousel-caption">
             <h3>Segunda Imagen</h3>
             <p>Descripción breve de la segunda imagen.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="un juego de un fuego pequeño que tiene que superar dungeons.png" class="d-block w-100" alt="Tercera Imagen">
+          <img src="un juego de un fuego pequeño que tiene que superar dungeons.png" class="d-block w-100"
+            alt="Tercera Imagen">
           <div class="carousel-caption">
             <h3>Tercera Imagen</h3>
             <p>Descripción breve de la tercera imagen.</p>
@@ -166,112 +126,82 @@
       </button>
     </div>
   </div>
-  <footer>
-    <div class="footer-container">
-      <div class="footer-contact-form">
-        <h3>Pàgina de contacte</h3>
-        <form id="footerForm">
-          <input type="text" id="nom" nom="nom" placeholder="El teu nom" required>
-          <div class="error" id="nomError">El nom es obligatori</div>
-
-          <input type="email" id="email" nom="email" placeholder="Email" required>
-          <div class="error" id="emailError">El email no es valid</div>
-
-          <input type="text" id="asunto" nom="asunto" placeholder="Asumpte" required>
-          <div class="error" id="asuntoError">El asumpte es obligatori</div>
-
-          <textarea id="missatge" nom="missatge" rows="3" placeholder="Missatge o error sobre el joc" required></textarea>
-          <div class="error" id="missatgeError">El missatge es obligatori</div>
-
-          <button type="submit">Enviar</button>
-          <div class="success" id="responseMsg"></div>
-        </form>
-      </div>
+  <footer class="bg-gray-100 py-12 px-6" style="color: black;">
+    <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center" style="color: #00203F;">Formulari de Contacte</h2>
+      <form id="contact-form" class="space-y-6">
+        <div>
+          <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nom</label>
+          <div class="relative">
+            <input type="text" id="nombre" name="nombre" placeholder="El teu nom" 
+              class="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition" required>
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            </div>
+          </div>
+        </div>
+  
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correu Electrònic</label>
+          <div class="relative">
+            <input type="email" id="email" name="email" placeholder="tu@exemple.com"
+              class="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition" required>
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            </div>
+          </div>
+        </div>
+  
+        <div>
+          <label for="asunto" class="block text-sm font-medium text-gray-700 mb-1">Assumpte</label>
+          <input type="text" id="asunto" name="asunto" placeholder="Motiu del contacte"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition" required>
+        </div>
+  
+        <div>
+          <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Missatge</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escriu el teu missatge..."
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition" required></textarea>
+        </div>
+        
+        <div class="text-center">
+          <button type="submit"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded-lg shadow-md transition">
+            Enviar
+          </button>
+        </div>
+      </form>
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    const carrusel = document.querySelector('#carruselBootstrap');
-    const carouselInstance = new bootstrap.Carousel(carrusel, {
-    });
-
-    document.getElementById('carruselBootstrap').addEventListener('slide.bs.carousel', function () {});
-
-    //Footer de contact
-    const form = document.getElementById('footerForm');
-    const nom = document.getElementById('nom');
-    const email = document.getElementById('email');
-    const asunto= document.getElementById('asunto');
-    const missatge = document.getElementById('missatge');
-
-    const nomError = document.getElementById('nomError');
-    const emailError = document.getElementById('emailError');
-    const asuntoError= document.getElementById('asuntoError');
-    const missatgeError = document.getElementById('missatgeError');
-    const responseMsg = document.getElementById('responseMsg');
-
-    function validacioDeFormulari() {
-      let isValid = true;
-      nomError.style.display = 'none';
-      emailError.style.display = 'none';
-      asuntoError.style.display = 'none';
-      missatgeError.style.display = 'none';
-      responseMsg.textContent = '';
-
-      if (nom.value === '') {
-        nomError.style.display = 'block';
-        isValid = false;
+    document.getElementById('contact-form').addEventListener('submit', async function (event) {
+      event.preventDefault()
+      const formData = {
+        nombre: document.getElementById('nombre').value,
+        email: document.getElementById('email').value,
+        asunto: document.getElementById('asunto').value,
+        mensaje: document.getElementById('mensaje').value,
+        api_token: "pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS"
       }
-
-      const emailCaracteres = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailCaracteres.test(email.value)) {
-        emailError.style.display = 'block';
-        isValid = false;
-      }
-
-      if (asunto.value === '') {
-      asuntoError.style.display = 'block';
-      isValid = false;
-    }
-
-      if (missatge.value === '') {
-        missatgeError.style.display = 'block';
-        isValid = false;
-      }
-
-      return isValid;
-    }
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      if (!validacioDeFormulari()) return;
-      const data = {
-        nom: nom.value,
-        email: email.value,
-        asunto: asunto.value,
-        missatge: missatge.value
-      };
-
       try {
-        let token = "pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS";
-        const res = await fetch('https://phpstack-1076337-5399863.cloudwaysapps.com/', {
+        const response = await fetch('https://phpstack-1076337-5399863.cloudwaysapps.com/api/contact', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'
           },
-          body: JSON.stringify(data)
-        });
-
-        if (!res.ok) throw new Error('Error al enviar');
-
-        const result = await res.json();
-        responseMsg.textContent = '¡Mensaje enviado con éxito!';
-        form.reset();
+          body: JSON.stringify(formData)
+        })
+        if (response.ok) {
+          alert('Missatge enviat correctament!');
+          document.getElementById('contact-form').reset();
+        } else {
+          alert('Error en enviar el missatge. Torna-ho a intentar.');
+        }
       } catch (error) {
-        responseMsg.textContent = 'Error al enviar el mensaje.';
-        responseMsg.style.color = 'tomato';
+        console.error('Error:', error);
+        alert('Hi ha hagut un problema en enviar el missatge.');
       }
     });
   </script>
 </body>
+
 </html>
