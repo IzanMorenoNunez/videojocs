@@ -9,7 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  <title>Comentaris</title>
+  <title>Classificacions</title>
 </head>
 <header style="top: 0px;">
   <nav class="navbar bg-body-tertiary fixed-top">
@@ -55,7 +55,7 @@
   </nav>
 </header>
 <style>
-body {
+  body {
     background-color: #00203F;
     color: #ffffff;
     font-family: Arial, sans-serif;
@@ -113,11 +113,13 @@ body {
 
   /* Ajustos per a cada columna */
   .position {
-    flex: 0.5; /* La posició ocupa menys espai */
+    flex: 0.5;
+    /* La posició ocupa menys espai */
   }
 
   .name {
-    flex: 2; /* El nom ocupa més espai */
+    flex: 2;
+    /* El nom ocupa més espai */
   }
 
   .score {
@@ -132,37 +134,7 @@ body {
     <p class="text-gray-600">Cargando ranking...</p>
   </div>
 
-  <script>
-async function cargarRanking() {
-      try {
-        const response = await fetch('https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS', {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-
-        const data = await response.json();
-
-        const usuarios = data.data;
-
-        const rankingContainer = document.getElementById('ranking-container');
-        rankingContainer.innerHTML = '';
-
-        usuarios.forEach((usuario, index) => {
-          const div = document.createElement('div');
-          div.className = 'ranking-item';
-          div.innerHTML = ` ${usuario.name} - ${usuario.puntuacion} punts`;
-          rankingContainer.appendChild(div);
-        });
-      } catch (error) {
-        const rankingContainer = document.getElementById('ranking-container');
-        rankingContainer.innerHTML = '<p class="text-red-300">Error al carregar el rànquing.</p>';
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', cargarRanking);
-  </script>
+  <script src="js/classificacions.js"></script>
 </body>
 
 </html>
