@@ -1,184 +1,132 @@
 <!DOCTYPE html>
 <html lang="ca">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Galeria</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Galeria</title>
+    <style>
+        body {
+            background-color: #00203F;
+            color: #ffffff;
+            font-family: 'Share Tech Mono', monospace, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+        }
+    </style>
 </head>
-<header style="top: 0px;">
-  <nav class="navbar bg-body-tertiary fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">AFLAME</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AFLAME</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="qui_som.html">Qui som?</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="galeria.html">Galeria</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="comentaris.html">Comentaris</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="clasificacions.html">Clasificacions</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="posts.html">Posts</a>
-            </li>
-            <hr>
-            <li class="nav-item">
-              <a class="nav-link" href="requeriments.html">Requirements</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header>
-<style>
-  body {
-    background-color: #00203F;
-    color: #ffffff;
-  }
-
-  .carousel-item img {
-    object-fit: cover;
-    height: 450px;
-  }
-
-  .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    padding: 15px;
-  }
-
-  .custom-control {
-    font-size: 1.2rem;
-    color: #ffffff;
-  }
-</style>
-</head>
-
-<body>
-  <div class="container py-5">
-    <h1 class="text-center mb-4" style="margin-top: 100px;">Galeria - Contacte</h1>
-
-    <div id="carruselBootstrap" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carruselBootstrap" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carruselBootstrap" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carruselBootstrap" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="un juego de un fuego pequeño que tiene que superar dungeons.png" class="d-block w-100"
-            alt="Primera Imagen">
-          <div class="carousel-caption">
-            <h3>Primera Imagen</h3>
-            <p>Descripción breve de la primera imagen.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="un juego de un fuego pequeño que tiene que superar dungeons.png" class="d-block w-100"
-            alt="Segunda Imagen">
-          <div class="carousel-caption">
-            <h3>Segunda Imagen</h3>
-            <p>Descripción breve de la segunda imagen.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="un juego de un fuego pequeño que tiene que superar dungeons.png" class="d-block w-100"
-            alt="Tercera Imagen">
-          <div class="carousel-caption">
-            <h3>Tercera Imagen</h3>
-            <p>Descripción breve de la tercera imagen.</p>
-          </div>
-        </div>
-      </div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#carruselBootstrap" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carruselBootstrap" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
-      </button>
-    </div>
-  </div>
-  <footer class="bg-gray-100 py-12 px-6" style="color: black;">
-    <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
-      <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center" style="color: #00203F;">Formulari de Contacte</h2>
-      <form id="contact-form" class="space-y-6">
-        <div>
-          <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nom</label>
-          <div class="relative">
-            <input type="text" id="nombre" name="nombre" placeholder="El teu nom"
-              class="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition"
-              required>
-            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<body class="antialiased">
+    <header style="top: 0px;">
+        <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">AFLAME</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AFLAME</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="qui_som.html">Qui som?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="galeria.html">Galeria</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="comentaris.html">Comentaris</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="clasificacions.html">Clasificacions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="posts.html">Posts</a>
+                            </li>
+                            <hr>
+                            <li class="nav-item">
+                                <a class="nav-link" href="requeriments.html">Requirements</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correu Electrònic</label>
-          <div class="relative">
-            <input type="email" id="email" name="email" placeholder="tu@exemple.com"
-              class="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition"
-              required>
-            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        </nav>
+    </header>
+    <div class="container py-5 mt-16">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10">Galeria - Contacte</h1>
+        <div id="carruselBootstrap" class="carousel slide shadow-lg rounded-xl" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carruselBootstrap" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carruselBootstrap" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carruselBootstrap" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-          </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="un juego de un fuego pequeño que tiene que superar dungeons.png" class="d-block w-100 h-64 sm:h-80 md:h-96 object-cover" alt="Primera Imagen">
+                    <div class="carousel-caption bg-gray-900/70 rounded-lg p-4">
+                        <h3 class="text-lg sm:text-xl font-bold">Primera Imagen</h3>
+                        <p class="text-sm sm:text-base">Descripción breve de la primera imagen.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="un juego de un fuego pequeño que tiene que superar dungeons.png" class="d-block w-100 h-64 sm:h-80 md:h-96 object-cover" alt="Segunda Imagen">
+                    <div class="carousel-caption bg-gray-900/70 rounded-lg p-4">
+                        <h3 class="text-lg sm:text-xl font-bold">Segunda Imagen</h3>
+                        <p class="text-sm sm:text-base">Descripción breve de la segunda imagen.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="un juego de un fuego pequeño que tiene que superar dungeons.png" class="d-block w-100 h-64 sm:h-80 md:h-96 object-cover" alt="Tercera Imagen">
+                    <div class="carousel-caption bg-gray-900/70 rounded-lg p-4">
+                        <h3 class="text-lg sm:text-xl font-bold">Tercera Imagen</h3>
+                        <p class="text-sm sm:text-base">Descripción breve de la tercera imagen.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carruselBootstrap" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carruselBootstrap" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
         </div>
-
-        <div>
-          <label for="asunto" class="block text-sm font-medium text-gray-700 mb-1">Assumpte</label>
-          <input type="text" id="asunto" name="asunto" placeholder="Motiu del contacte"
-            class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition"
-            required>
-        </div>
-
-        <div>
-          <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Missatge</label>
-          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escriu el teu missatge..."
-            class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition"
-            required></textarea>
-        </div>
-
-        <div class="text-center">
-          <button type="submit"
-            class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded-lg shadow-md transition">
-            Enviar
-          </button>
-        </div>
-      </form>
     </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/galeria.js"></script>
+    <footer class="bg-gray-800 py-12 px-6">
+        <div class="max-w-2xl mx-auto bg-gray-700 p-8 rounded-2xl shadow-lg">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6 text-center">Formulari de Contacte</h2>
+            <form id="contact-form" class="space-y-6">
+                <div>
+                    <label for="nombre" class="block text-sm sm:text-base font-medium text-gray-300 mb-1">Nom</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="El teu nom" class="w-full px-4 py-2 border border-gray-500 rounded-lg bg-gray-900 text-white focus:ring-blue-500 focus:border-blue-500 transition" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm sm:text-base font-medium text-gray-300 mb-1">Correu Electrònic</label>
+                    <input type="email" id="email" name="email" placeholder="tu@exemple.com" class="w-full px-4 py-2 border border-gray-500 rounded-lg bg-gray-900 text-white focus:ring-blue-500 focus:border-blue-500 transition" required>
+                </div>
+                <div>
+                    <label for="asunto" class="block text-sm sm:text-base font-medium text-gray-300 mb-1">Assumpte</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Motiu del contacte" class="w-full px-4 py-2 border border-gray-500 rounded-lg bg-gray-900 text-white focus:ring-blue-500 focus:border-blue-500 transition" required>
+                </div>
+                <div>
+                    <label for="mensaje" class="block text-sm sm:text-base font-medium text-gray-300 mb-1">Missatge</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escriu el teu missatge..." class="w-full px-4 py-2 border border-gray-500 rounded-lg bg-gray-900 text-white focus:ring-blue-500 focus:border-blue-500 transition" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded-lg shadow-md transition">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </footer>
+    <script src="js/galeria.js"></script>
 </body>
-
 </html>

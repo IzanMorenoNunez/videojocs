@@ -3,133 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Requeriments</title>
-
     <style>
-      body {
-        font-size: 1.2rem;
-        background-color: #00203F;
-        color: #ffffff;
-      }
-      .card {
-        padding: 20px;
-        border: 2px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-      .card:hover {
-        transform: scale(1.05);
-        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-      }
-      .card-title {
-        font-size: 1.8rem;
-        font-weight: bold;
-      }
-      ul {
-        font-size: 1.1rem;
-      }
-      .fade-in {
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-      }
-      .fade-in.visible {
-        opacity: 1;
-      }
-    </style> 
+        body {
+            background-color: #00203F;
+            color: #ffffff;
+            font-family: 'Share Tech Mono', monospace, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+    </style>
 </head>
-<header style="top: 0px;">
-    <nav class="navbar bg-body-tertiary fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">AFLAME</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AFLAME</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="qui_som.html">Qui som?</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="galeria.html">Galeria</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="comentaris.html">Comentaris</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="clasificacions.html">Clasificacions</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="posts.html">Posts</a>
-              </li>
-              <hr>
-              <li class="nav-item">
-                <a class="nav-link active" href="requeriments.html">Requirements</a>
-              </li>
-            </ul>
-          </div>
+<body class="antialiased bg-gradient-to-b from-[#00203F] to-[#001a2f]">
+    <header style="top: 0px;">
+        <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">AFLAME</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AFLAME</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="qui_som.html">Qui som?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="galeria.html">Galeria</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="comentaris.html">Comentaris</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="clasificacions.html">Clasificacions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="posts.html">Posts</a>
+                            </li>
+                            <hr>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="requeriments.html">Requirements</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container py-5 mt-16 sm:mt-20">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 text-white">Requeriments de Rendimient</h1>
+        <div class="row g-4">
+            <div class="col-12 col-md-6">
+                <div id="minimos" class="card bg-gray-800 border border-gray-600 rounded-xl p-4 sm:p-6 shadow-xl hover:scale-105 hover:shadow-2xl transition transform animate-fade-in">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-orange-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-white">Requeriments Mínims</h3>
+                    </div>
+                    <ul class="text-base sm:text-lg text-gray-300 space-y-2">
+                        <li>Procesador: Intel Core i5</li>
+                        <li>RAM: 8GB</li>
+                        <li>Targeta Gràfica: GTX 1050</li>
+                        <li>Espai al disc: 50GB</li>
+                        <li>Sistema Operatiu: Windows 10</li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg shadow-md transition">Descobreix més</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div id="recomendados" class="card bg-gray-800 border border-gray-600 rounded-xl p-4 sm:p-6 shadow-xl hover:scale-105 hover:shadow-2xl transition transform animate-fade-in" style="animation-delay: 0.5s;">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-orange-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-white">Requeriments Recomanats</h3>
+                    </div>
+                    <ul class="text-base sm:text-lg text-gray-300 space-y-2">
+                        <li>Procesador: Intel Core i7</li>
+                        <li>RAM: 16GB</li>
+                        <li>Targeta Gràfica: RTX 3060</li>
+                        <li>Espai al disc: 100GB</li>
+                        <li>Sistema Operatiu: Windows 11</li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg shadow-md transition">Descobreix més</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </nav>
-</header>
-<body>
-  <div class="container mt-5">
-    <h1 class="text-center mb-4" style="margin-top: 150px;">Requeriments de Rendimient</h1>
-    <div class="row mt-4">
-      <div class="col-md-6 fade-in" id="minimos">
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">Requeriments Minims</h3>
-            <ul>
-              <li>Procesador: Intel Core i5</li>
-              <li>RAM: 8GB</li>
-              <li>Targeta Gràfica: GTX 1050</li>
-              <li>Espai al disc: 50GB</li>
-              <li>Sistema Operatiu: Windows 10</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 fade-in" id="recomendados">
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">Requeriments Recomendats</h3>
-            <ul>
-              <li>Procesador: Intel Core i7</li>
-              <li>RAM: 16GB</li>
-              <li>Targeta Gràfica: RTX 3060</li>
-              <li>Espai al disc: 100GB</li>
-              <li>Sistema Operatiu: Windows 11</li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      setTimeout(() => {
-        document.getElementById("minimos").classList.add("visible");
-      }, 500);
-
-      setTimeout(() => {
-        document.getElementById("recomendados").classList.add("visible");
-      }, 1500);
-    });
-  </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const minimos = document.getElementById("minimos");
+            const recomendados = document.getElementById("recomendados");
+            setTimeout(() => minimos.classList.add("animate-fade-in"), 500);
+            setTimeout(() => recomendados.classList.add("animate-fade-in"), 1500);
+        });
+    </script>
 </body>
-</html>
 </html>
