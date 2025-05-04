@@ -26,7 +26,14 @@ async function cargarposts() {
           `;
           postsContainer.appendChild(div);
       });
-  } catch (error) {}
+  } catch (error) {
+      const postsContainer = document.getElementById('posts-container');
+      postsContainer.innerHTML = `
+          <div class="bg-gray-600 p-4 rounded-md">
+              <p class="text-red-300 text-center text-sm sm:text-base">Error al carregar el post.</p>
+          </div>
+      `;
+  }
 }
 
 document.addEventListener('DOMContentLoaded', cargarposts);
